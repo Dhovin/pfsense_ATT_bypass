@@ -1,6 +1,17 @@
 # pfsense AT&T bypass
-#### Setup for bypassing the AT&T router using pfsense 23.05 and newer
+Setup for bypassing the AT&T router using pfsense 23.05 and newer
 
+## Requirements:
+- 4 NIC ports
+  - Intel controller prefered
+  - two either builtin or PCIe (other two can be USB since they are outof band)
+- pfsense 23.05 or newer
+
+## Sources: 
+- https://docs.netgate.com/pfsense/en/latest/recipes/authbridge.html
+- https://support.adamnet.works/t/running-on-a-transparent-pfsense-bridge/79
+
+## Instructions:
 1. Disable Outbound NAT
    - Firewall > NAT > Outbound
    - Change Outbound NAT Mode to Disabled
@@ -19,4 +30,7 @@
    - Select the new bridge in the bottom dropdown and click +Add
 6. Disable DHCPv6 and DHCP RA on LAN
    - Services >
+   - 
+7. Create modem interface
+   - Interface > Assignments
    - 
