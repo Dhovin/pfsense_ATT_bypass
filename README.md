@@ -29,8 +29,9 @@ Setup for bypassing the AT&T router using pfsense 23.05 and newer
    - Interfaces > Interface Assignments
    - Select the new bridge in the bottom dropdown and click +Add
 6. Disable DHCPv6 and DHCP RA on LAN
-   - Services >
-   - 
+   - Services > DHCPv6 Server & RA > LAN
+   - Select DHCPv6 Server, uncheck Enable DHCPc6 Server on interface LAN, and click Save
+   - Select Router Advertisements, change Router Mode to Disabled and click Save
 7. Create modem interface
    - Interface > Assignments
    - 
